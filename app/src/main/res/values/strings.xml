@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Project</string>
+
+    <!--login activity-->
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="forgetPass">Forget Password</string>
+    <string name="remember">Remember Me</string>
+    <string name="newAccount">Create New Account?</string>
+    <string name="signup_loginActivity">SignUp</string>
+    <string name="skip">Skip</string>
+    <string name="facebook"> Login With Facebook </string>
+
+    <string name="facebook_app_id">1958401370855022</string>
+    <string name="fb_login_protocol_scheme">fb1958401370855022</string>
+
+    <!--signup activity-->
+    <string name="signup">SignUp</string>
+    <string name="haveAccount">Already Have Account</string>
+    <string name="login_signup">Login </string>
+
+    <!--forget password activity-->
+    <string name="forget_password">Forget Password ?</string>
+    <string name="text_reset">We just need your registered Email id to
+        sent your password reset instructions.</string>
+    <string name="reset_pass">Reset Password</string>
+    <string name="back">Back</string>
+
+    <string name="logout">Logout</string>
+
+
+</resources>

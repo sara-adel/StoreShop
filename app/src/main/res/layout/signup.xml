@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/linear_paddingTop"
+    android:paddingBottom="@dimen/linear_padding"
+    android:paddingLeft="@dimen/linear_padding"
+    android:paddingRight="@dimen/linear_padding"
+    tools:context="com.sara.project.Activities.Signup">
+
+    <EditText
+        android:id="@+id/email_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        android:padding="@dimen/editText_padding"
+        android:layout_margin="@dimen/editText_margin"
+        android:background="@drawable/edittext"
+        android:textColor="@color/textColor" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/password_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:padding="@dimen/editText_padding"
+            android:layout_margin="@dimen/editText_margin"
+            android:background="@drawable/edittext"
+            android:textColor="@color/textColor"/>
+
+        <ImageView
+            android:id="@+id/showpass_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/password_signup"
+            android:clickable="true"
+            android:padding="20dp"
+            android:src="@drawable/show_pass" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/colorbutton"
+        android:text="@string/signup"
+        android:textSize="25sp"
+        android:layout_margin="@dimen/button_margin"
+        android:textColor="@color/textColor"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/haveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/haveAccount"
+            android:padding="@dimen/haveaccount_padding"
+            android:textSize="17sp"
+            android:layout_marginLeft="@dimen/haveaccount_margin"
+            android:textColor="@color/textColor"/>
+        <Button
+            android:id="@+id/haveAccount_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_signup"
+            android:background="@drawable/whitebutton"
+            android:layout_marginLeft="@dimen/signup_margin"
+            android:textSize="17sp"
+            android:textColor="@color/backItems"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarSignUp"
+        android:layout_width="@dimen/progressbar_width_hight"
+        android:layout_height="@dimen/progressbar_width_hight"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/progressbar_margin"
+        android:visibility="gone" />
+</LinearLayout>

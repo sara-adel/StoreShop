@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--main activity-->
+    <dimen name="layout_width_hight">150dp</dimen>
+
+    <!--login activity-->
+    <dimen name="linear_padding">16dp</dimen>
+    <dimen name="image_margin">15dp</dimen>
+    <dimen name="editText_padding">10dp</dimen>
+    <dimen name="editText_margin">16dp</dimen>
+    <dimen name="button_margin">16dp</dimen>
+    <dimen name="checkbox_padding">10dp</dimen>
+    <dimen name="checkbox_margin_left">180dp</dimen>
+    <dimen name="signup_marginLeft">185dp</dimen>
+    <dimen name="signup_paddintTop">7dp</dimen>
+    <dimen name="skip_marginLeft">230dp</dimen>
+
+    <dimen name="faceLogin_width">250dp</dimen>
+    <dimen name="facelogin_margin">20dp</dimen>
+
+    <!--signup activity-->
+    <dimen name="linear_paddingTop">130dp</dimen>
+    <dimen name="signup_margin">218dp</dimen>
+    <dimen name="haveaccount_margin">50dp</dimen>
+    <dimen name="haveaccount_padding">12dp</dimen>
+    <dimen name="progressbar_width_hight">30dp</dimen>
+    <dimen name="progressbar_margin">20dp</dimen>
+    
+    <!--forget pssword activity-->
+    <dimen name="text_padding">15dp</dimen>
+    <dimen name="text_margin">10dp</dimen>
+</resources>
