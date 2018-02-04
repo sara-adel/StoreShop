@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project</string>
+    <string name="app_name">Store Shop</string>
 
     <!--login activity-->
     <string name="email">Email</string>
@@ -12,8 +12,8 @@
     <string name="skip">Skip</string>
     <string name="facebook"> Login With Facebook </string>
 
-    <string name="facebook_app_id">1958401370855022</string>
-    <string name="fb_login_protocol_scheme">fb1958401370855022</string>
+    <string name="facebook_app_id">867436203429259</string>
+    <string name="fb_login_protocol_scheme">fb867436203429259</string>
 
     <!--signup activity-->
     <string name="signup">SignUp</string>
@@ -27,7 +27,35 @@
     <string name="reset_pass">Reset Password</string>
     <string name="back">Back</string>
 
+    <!--home activity-->
     <string name="logout">Logout</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--nav_header-->
+    <string name="welcome">Welcome</string>
+    <string name="login_nav">Login</string>
+    <string name="register_nav">Register</string>
+    <!--main drawer-->
+    <string name="nav_about">About</string>
+    <string name="nav_setting">Settings</string>
+    <string name="nav_logout">Logout</string>
 
+    <!--add store and add item -->
+    <string name="store_location">Get store location</string>
+    <string name="notification">Notification</string>
+    <string name="add_button">Add</string>
+    <string name="cancel_button">Cancel</string>
 
+    <!--about fragment-->
+    <string name="about">It is a store shop</string>
+
+    <!--settings fragment-->
+    <string name="lang">Languages</string>
+    <string name="arabicRadio">Arabic</string>
+    <string name="englishRadio">English</string>
+    <string name="frenchRadio">French</string>
+
+    <!--list item parent & child-->
+    <!--<string name="lang1">Arabic</string>-->
+    <!--<string name="lang2">English</string>-->
 </resources>

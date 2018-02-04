@@ -10,6 +10,7 @@
     <dimen name="editText_padding">10dp</dimen>
     <dimen name="editText_margin">16dp</dimen>
     <dimen name="button_margin">16dp</dimen>
+    <dimen name="image_padding">20dp</dimen>
     <dimen name="checkbox_padding">10dp</dimen>
     <dimen name="checkbox_margin_left">180dp</dimen>
     <dimen name="signup_marginLeft">185dp</dimen>
@@ -30,4 +31,35 @@
     <!--forget pssword activity-->
     <dimen name="text_padding">15dp</dimen>
     <dimen name="text_margin">10dp</dimen>
+
+    <!--home activity-->
+    <dimen name="recycler_width">300dp</dimen>
+    <!--app_toolbar-->
+    <dimen name="but_marginTop">30dp</dimen>
+    <dimen name="but_marginRight">16dp</dimen>
+    <dimen name="nav_margin">55dp</dimen>
+    <!--row_item-->
+    <dimen name="card_height">50dp</dimen>
+    <dimen name="icon_width_height">30dp</dimen>
+    <dimen name="icon_margin">10dp</dimen>"
+    <dimen name="item_margin_left">20dp</dimen>
+    <dimen name="item_margin">7dp</dimen>
+
+    <!--add store and add item -->
+    <dimen name="linear_marginTop">70dp</dimen>
+    <dimen name="image_marginTop">10dp</dimen>
+    <dimen name="edit_margin">8dp</dimen>
+    <dimen name="button_width">120dp</dimen>
+    <dimen name="spinner_height">45dp</dimen>
+
+    <!--about fragment-->
+    <dimen name="text_marginTop">30dp</dimen>
+    <dimen name="logo_marginTop">60dp</dimen>
+
+    <!--list item parent & child-->
+    <dimen name="padding">16dp</dimen>
+    <dimen name="margin">8dp</dimen>
+
+    <!--setting fragment-->
+    <dimen name="paddingText">10dp</dimen>
 </resources>

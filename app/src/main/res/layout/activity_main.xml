@@ -9,9 +9,9 @@
     <com.sara.project.CircleTransform
         android:layout_width="@dimen/layout_width_hight"
         android:layout_height="@dimen/layout_width_hight"
-        android:src="@drawable/sara"
-        android:scaleType="centerCrop"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

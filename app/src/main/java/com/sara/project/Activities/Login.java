@@ -2,12 +2,11 @@ package com.sara.project.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.text.InputType;
 import android.text.TextUtils;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +34,8 @@ import com.sara.project.R;
 
 public class Login extends AppCompatActivity {
 
+    DBController mydb;
+    String id;
     private EditText email , pass;
     private ImageView showPass;
     private Button login, forgetPass, signup, skip ;
@@ -42,16 +43,12 @@ public class Login extends AppCompatActivity {
     private CheckBox rememberMe;
     private ProgressBar progressBarLogin;
     private String emailText , passText;
-
     private CallbackManager mCallbackManager;
-
     private boolean isCilcked = false;
     private FirebaseAuth mAuth;
     private SharedPreferences loginPrefs;
     private SharedPreferences.Editor loginPrefEditor;
     private boolean saveLogin;
-
-    DBController mydb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,8 +117,6 @@ public class Login extends AppCompatActivity {
                 Log.d("msg", "facebook:onError", error);
             }
         });
-
-
     }
 
     @Override
@@ -163,12 +158,15 @@ public class Login extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("msg", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            //facebookLogin.setEnabled(true);
+
                             updateUI();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("msg", "signInWithCredential:failure", task.getException());
                             Toast.makeText(Login.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
+                            //facebookLogin.setEnabled(true);
                             updateUI();
                         }
 
@@ -183,9 +181,10 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isCilcked){
-                    pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    //pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    pass.setInputType(InputType.TYPE_CLASS_TEXT);
                 } else {
-                    pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    //pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                 }
             }
         });
@@ -228,23 +227,43 @@ public class Login extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 progressBarLogin.setVisibility(View.GONE);
+
                                 if (!task.isSuccessful()) {
                                     // there was an error
                                         Toast.makeText(Login.this, "check your email and password or sign up",
                                                 Toast.LENGTH_LONG).show();
                                 } else {
-                                    //insert data into table of users
-                                    mydb.openDB();
-                                    long insert = mydb.insert_intoUsers(emailText);
-                                    mydb.closeDB();
-                                    if (insert == -1) {
-                                        Toast.makeText(Login.this, "Data not Inserted", Toast.LENGTH_LONG).show();
-                                    }
-                                    else {
-                                        Toast.makeText(Login.this, "Data Inserted", Toast.LENGTH_LONG).show();
+
+                                    //if user already exist in database
+                                    String email_value = mydb.getEmailOfUser(emailText);
+                                    if (emailText.equals(email_value)) {
+
+                                        id = mydb.getIdOfUser(emailText);
+
+                                        Intent intent = new Intent(Login.this, Home.class);
+                                        Bundle bundle = new Bundle();
+                                        bundle.putString("idOfUser", id);
+                                        intent.putExtras(bundle);
+                                        startActivity(intent);
+                                        finish();
+
+                                    } else {
+                                        //insert data into table of users
+                                        long insert = mydb.insert_intoUsers(emailText);
+                                        if (insert == -1) {
+                                            Toast.makeText(Login.this, "Data not Inserted", Toast.LENGTH_LONG).show();
+                                        } else {
+                                            Toast.makeText(Login.this, "Data Inserted", Toast.LENGTH_LONG).show();
+
+                                            //get id
+                                            id = mydb.getIdOfUser(emailText);
+                                        }
                                     }
 
                                     Intent intent = new Intent(Login.this, Home.class);
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("idOfUser", id);
+                                    intent.putExtras(bundle);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -253,6 +272,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 
     private void ForgetPasswordAction(){
         forgetPass.setOnClickListener(new View.OnClickListener() {

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sara.project.Activities.AddStore">
+
+    <include layout="@layout/app_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/linear_padding"
+        android:paddingLeft="@dimen/linear_padding"
+        android:paddingRight="@dimen/linear_padding"
+        android:paddingTop="@dimen/linear_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/linear_marginTop">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_marginTop"
+                android:src="@drawable/shop" />
+
+            <EditText
+                android:id="@+id/store_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_margin"
+                android:background="@drawable/edittext"
+                android:hint="Store Name"
+                android:padding="@dimen/editText_padding"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_marginTop"
+                android:src="@drawable/location" />
+
+            <EditText
+                android:id="@+id/store_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edit_margin"
+                android:background="@drawable/edittext"
+                android:hint="Store Location"
+                android:padding="@dimen/editText_padding"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/location" />
+
+            <Button
+                android:id="@+id/map_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/whitebutton"
+                android:padding="@dimen/editText_padding"
+                android:text="@string/store_location"
+
+                android:textColor="@color/backItems"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/rememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/checkbox_padding"
+            android:text="@string/notification"
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/linear_marginTop">
+
+            <Button
+                android:id="@+id/addStore"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/colorbutton"
+                android:text="@string/add_button"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cancelStore"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/addStore"
+                android:background="@drawable/colorbutton"
+                android:text="@string/cancel_button"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

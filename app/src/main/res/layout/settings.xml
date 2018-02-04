@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/linear_padding"
+    android:paddingLeft="@dimen/linear_padding"
+    android:paddingRight="@dimen/linear_padding"
+    android:paddingTop="@dimen/linear_padding">
+
+    <TextView
+        android:id="@+id/parent_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bluebutton"
+        android:clickable="true"
+        android:drawableRight="@drawable/up"
+        android:padding="@dimen/paddingText"
+        android:text="@string/lang"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/lang_arabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:text="@string/arabicRadio"
+            android:textSize="23sp" />
+
+        <RadioButton
+            android:id="@+id/lang_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:text="@string/englishRadio"
+            android:textSize="23sp" />
+
+        <RadioButton
+            android:id="@+id/lang_french"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:text="@string/frenchRadio"
+            android:textSize="23sp" />
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/linear_padding"
     android:paddingBottom="@dimen/linear_padding"
     android:paddingLeft="@dimen/linear_padding"
     android:paddingRight="@dimen/linear_padding"
+    android:paddingTop="@dimen/linear_padding"
     tools:context="com.sara.project.Activities.Login">
 
     <com.sara.project.CircleTransform
@@ -17,27 +17,27 @@
         android:layout_height="@dimen/layout_width_hight"
         android:layout_gravity="center"
         android:scaleType="centerCrop"
-        android:src="@drawable/sara" />
+        android:src="@drawable/logo" />
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/faceLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="@dimen/editText_margin"/>
+        android:layout_margin="@dimen/editText_margin"
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:textSize="20sp"
-        android:padding="@dimen/editText_padding"
         android:layout_margin="@dimen/editText_margin"
         android:background="@drawable/edittext"
-        android:textColor="@color/textColor"/>
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/editText_padding"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -47,13 +47,13 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/pass"
-            android:inputType="textPassword"
-            android:textSize="20sp"
-            android:padding="@dimen/editText_padding"
             android:layout_margin="@dimen/editText_margin"
             android:background="@drawable/edittext"
-            android:textColor="@color/textColor"/>
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:padding="@dimen/editText_padding"
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/show_pass"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/password"
             android:clickable="true"
-            android:padding="20dp"
+            android:padding="@dimen/image_padding"
             android:src="@drawable/show_pass" />
 
     </RelativeLayout>
@@ -70,11 +70,11 @@
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/button_margin"
         android:background="@drawable/colorbutton"
         android:text="@string/login"
-        android:textSize="25sp"
-        android:layout_margin="@dimen/button_margin"
-        android:textColor="@color/textColor"/>
+        android:textColor="@color/textColor"
+        android:textSize="25sp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -84,21 +84,21 @@
             android:id="@+id/forgetPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/forgetPass"
             android:background="@drawable/whitebutton"
-            android:textSize="17sp"
             android:clickable="true"
             android:padding="@dimen/editText_padding"
-            android:textColor="@color/textColor"/>
+            android:text="@string/forgetPass"
+            android:textColor="@color/textColor"
+            android:textSize="17sp" />
         <CheckBox
             android:id="@+id/rememberMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/remember"
-            android:textSize="17sp"
             android:layout_marginLeft="@dimen/checkbox_margin_left"
             android:padding="@dimen/checkbox_padding"
+            android:text="@string/remember"
             android:textColor="@color/textColor"
+            android:textSize="17sp"
             android:textStyle="bold"/>
     </RelativeLayout>
 
@@ -109,21 +109,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/newAccount"
-            android:textSize="17sp"
+            android:layout_marginLeft="@dimen/button_margin"
             android:clickable="true"
             android:padding="@dimen/editText_padding"
-            android:layout_marginLeft="@dimen/button_margin"
-            android:textColor="@color/textColor" />
+            android:text="@string/newAccount"
+            android:textColor="@color/textColor"
+            android:textSize="17sp" />
         <Button
             android:id="@+id/signup_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_loginActivity"
-            android:textSize="17sp"
-            android:background="@drawable/whitebutton"
             android:layout_marginLeft="@dimen/signup_marginLeft"
+            android:background="@drawable/whitebutton"
+            android:text="@string/signup_loginActivity"
             android:textColor="@color/backItems"
+            android:textSize="17sp"
             android:textStyle="bold"/>
 
     </RelativeLayout>
@@ -132,11 +132,11 @@
         android:id="@+id/skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/skip"
-        android:textSize="17sp"
-        android:background="@drawable/whitebutton"
         android:layout_marginLeft="@dimen/skip_marginLeft"
+        android:background="@drawable/whitebutton"
+        android:text="@string/skip"
         android:textColor="@color/backItems"
+        android:textSize="17sp"
         android:textStyle="bold"/>
 
     <ProgressBar

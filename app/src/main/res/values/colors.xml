@@ -2,11 +2,11 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#c43c00</color>
+    <color name="colorAccent">#303F9F</color>
 
     <color name="backButtons">#c43c00</color>
     <color name="backItems">#303F9F</color>
     <color name="backLogin">#00AA8D</color>
     <color name="textColor">#000000</color>
-
+    <color name="title">#ffffff</color>
 </resources>

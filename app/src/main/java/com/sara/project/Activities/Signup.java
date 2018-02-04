@@ -1,9 +1,9 @@
 package com.sara.project.Activities;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -106,12 +106,9 @@ public class Signup extends AppCompatActivity {
                                 emailSignup.setText("");
                                 passSignup.setText("");
 
-                                //if whitebutton failed
+                                //if button failed
                                 if (!task.isSuccessful()) {
                                     Toast.makeText(Signup.this, "User Created failed.", Toast.LENGTH_LONG).show();
-                                } else {
-                                    startActivity(new Intent(Signup.this, Home.class));
-                                    finish();
                                 }
                             }
                         });
